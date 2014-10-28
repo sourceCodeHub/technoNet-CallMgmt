@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 28, 2014 9:53:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.tns.cms.core.models.WorkflowHistoryVO" extends="com.tns.cms.core.models.BaseVO" table="WORKFLOW_HISTORY" lazy="false">
+        <key/>
+        <property name="entityid" type="java.lang.String">
+            <column name="ENTITYID" />
+        </property>
+        <property name="entityType" type="java.lang.String">
+            <column name="ENTITY_TYPE" />
+        </property>
+        <property name="remarks" type="java.lang.String">
+            <column name="REMARKS" />
+        </property>
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+         <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

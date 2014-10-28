@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 28, 2014 9:53:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.tns.cms.core.models.ContractProductVO" extends="com.tns.cms.core.models.BaseVO" table="CONTRACT_PRODUCTS" lazy="false">
+        <key>
+            <column name="CONTRACTID" />
+            <column name="PRODUCTDID" />
+        </key>
+       
+        <property name="contractid" type="java.lang.String">
+            <column name="CONTRACTID" />
+        </property>
+        <property name="productdid" type="java.lang.String">
+            <column name="PRODUCTDID" />
+        </property>
+        <property name="contractProductDetails" type="java.lang.String">
+            <column name="CONTRACT_PRODUCT_DETAILS" />
+        </property>
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+         <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>       
+    </joined-subclass>
+</hibernate-mapping>

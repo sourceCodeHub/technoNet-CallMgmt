@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 28, 2014 9:53:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.tns.cms.core.models.CodeDecodeVO" extends="com.tns.cms.core.models.BaseVO" table="CODE_DECODE" lazy="false">
+        <key>
+            <column name="PRIMARY_CODE" />
+            <column name="SECONDARY_CODE"/>
+        </key>
+        
+        <property name="primaryCode" type="java.lang.String">
+            <column name="PRIMARY_CODE" />
+        </property>
+        <property name="secondaryCode" type="java.lang.String">
+            <column name="SECONDARY_CODE" />
+        </property>
+        <property name="primaryDecode" type="java.lang.String">
+            <column name="PRIMARY_DECODE" />
+        </property>
+        <property name="secondaryDecode" type="java.lang.String">
+            <column name="SECONDARY_DECODE" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

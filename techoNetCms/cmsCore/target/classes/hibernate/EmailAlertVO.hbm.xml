@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 28, 2014 9:53:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.tns.cms.core.models.EmailAlertVO" extends="com.tns.cms.core.models.BaseVO" table="EMAIL_ALERTS" lazy="false">
+        <key/>
+       
+        <property name="alertEntityType" type="java.lang.String">
+            <column name="ALERT_ENTITY_TYPE" />
+        </property>
+        <property name="alertEntityid" type="java.lang.String">
+            <column name="ALERT_ENTITY_ID" />
+        </property>
+        <property name="emailSuccess" type="java.lang.String">
+            <column name="EMAIL_SUCCESS" />
+        </property>
+        <property name="emailSentList" type="java.lang.String">
+            <column name="EMAIL_SENT_LIST" />
+        </property>
+        <property name="emailAlertComments" type="java.lang.String">
+            <column name="EMAIL_ALERT_COMMENTS" />
+        </property>
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+         <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>        
+    </joined-subclass>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="tnsCmsSessionFactory">
+  <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+  <property name="hibernate.connection.password">tnscms</property>
+  <property name="hibernate.connection.url">jdbc:mysql://&lt;hostname&gt;/&lt;database&gt;</property>
+  <property name="hibernate.connection.username">APP_USER</property>
+  <property name="hibernate.default_schema">tnscms</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+  <property name="hibernate.connection.pool_size">10</property>
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+  <mapping resource="hibernate/CodeDecodeVO.hbm.xml"/>
+  <mapping resource="hibernate/ComplaintVO.hbm.xml"/>
+  <mapping resource="hibernate/ContractProductVO.hbm.xml"/>
+  <mapping resource="hibernate/ContractVO.hbm.xml"/>
+  <mapping resource="hibernate/CustomerContactVO.hbm.xml"/>
+  <mapping resource="hibernate/CustomerFinancialDetailsVO.hbm.xml"/>
+  <mapping resource="hibernate/CustomerVO.hbm.xml"/>
+  <mapping resource="hibernate/EmailAlertVO.hbm.xml"/>
+  <mapping resource="hibernate/EmployeeVO.hbm.xml"/>
+  <mapping resource="hibernate/ProductVO.hbm.xml"/>
+  <mapping resource="hibernate/RepairComplaintVO.hbm.xml"/>
+  <mapping resource="hibernate/UserLoginVO.hbm.xml"/>
+  <mapping resource="hibernate/WorkflowHistoryVO.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

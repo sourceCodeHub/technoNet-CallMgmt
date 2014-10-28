@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 28, 2014 9:53:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.tns.cms.core.models.ProductVO" extends="com.tns.cms.core.models.BaseVO" table="PRODUCTS" lazy="false">
+        <key>
+            <column name="PRODUCTID" />
+        </key>
+        <property name="productid" type="java.lang.String">
+            <column name="PRODUCTID" />
+        </property>
+        <property name="productType" type="java.lang.String">
+            <column name="PRODUCT_TYPE" />
+        </property>
+        <property name="productMake" type="java.lang.String">
+            <column name="PRODUCT_MAKE" />
+        </property>
+        <property name="productModel" type="java.lang.String">
+            <column name="PRODUCT_MODEL" />
+        </property>
+        <property name="productContactName" type="java.lang.String">
+            <column name="PRODUCT_CONTACT_NAME" />
+        </property>
+        <property name="productContactPhone" type="java.lang.String">
+            <column name="PRODUCT_CONTACT_PHONE" />
+        </property>
+        <property name="productContactEmail" type="java.lang.String">
+            <column name="PRODUCT_CONTACT_EMAIL" />
+        </property>
+        <property name="productWebsite" type="java.lang.String">
+            <column name="PRODUCT_WEBSITE" />
+        </property>
+        <property name="productIsactive" type="java.lang.String">
+            <column name="PRODUCT_ISACTIVE" />
+        </property>
+        <property name="productComments" type="java.lang.String">
+            <column name="PRODUCT_COMMENTS" />
+        </property>
+         <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+         <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>
+        <property name="updateDttm" type="java.util.Date">
+            <column name="UPDATE_DTTM" />
+        </property>
+        <property name="updateUserid" type="java.lang.String">
+            <column name="UPDATE_USERID" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>
