@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 9:29:49 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tns.cms.core.hibernate.models.Employee" table="EMPLOYEE">
+        <id name="employeeid" type="java.lang.String">
+            <column name="EMPLOYEEID" />
+            <generator class="native" />
+        </id>
+        <property name="employeeFirstName" type="java.lang.String">
+            <column name="EMPLOYEE_FIRST_NAME" />
+        </property>
+        <property name="employeeLastName" type="java.lang.String">
+            <column name="EMPLOYEE_LAST_NAME" />
+        </property>
+        <property name="employeeAddressLine1" type="java.lang.String">
+            <column name="EMPLOYEE_ADDRESS_LINE1" />
+        </property>
+        <property name="employeeAddressLine2" type="java.lang.String">
+            <column name="EMPLOYEE_ADDRESS_LINE2" />
+        </property>
+        <property name="employeeContactPhone" type="java.lang.String">
+            <column name="EMPLOYEE_CONTACT_PHONE" />
+        </property>
+        <property name="employeeContactMob" type="java.lang.String">
+            <column name="EMPLOYEE_CONTACT_MOB" />
+        </property>
+        <property name="employeeContactEmail" type="java.lang.String">
+            <column name="EMPLOYEE_CONTACT_EMAIL" />
+        </property>
+        <property name="employeeDesignation" type="java.lang.String">
+            <column name="EMPLOYEE_DESIGNATION" />
+        </property>
+        <!-- <property name="employeePhoto" type="java.io.InputStream">
+            <column name="EMPLOYEE_PHOTO" />
+        </property> -->
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+        <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>
+        <property name="updateDttm" type="java.util.Date">
+            <column name="UPDATE_DTTM" />
+        </property>
+        <property name="updateUserid" type="java.lang.String">
+            <column name="UPDATE_USERID" />
+        </property>
+    </class>
+</hibernate-mapping>

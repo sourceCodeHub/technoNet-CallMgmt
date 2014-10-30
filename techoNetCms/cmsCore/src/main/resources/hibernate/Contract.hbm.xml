@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 9:29:49 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.tns.cms.core.hibernate.models.Contract" table="CONTRACT">
+		<id name="contractid" type="java.lang.String">
+			<column name="CONTRACTID" />
+			<generator class="native" />
+		</id>
+
+		<set name="contractProducts" table="CONTRACT_PRODUCT" inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="CONTRACTID" not-null="true" />
+			</key>
+			<one-to-many class="com.tns.cms.core.hibernate.models.ContractProduct" />
+		</set>
+		
+		<set name="complaints" table="COMPLAINT" inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="CONTRACTID" not-null="true" />
+			</key>
+			<one-to-many class="com.tns.cms.core.hibernate.models.Complaint" />
+		</set>
+
+		<property name="customerid" type="java.lang.String">
+			<column name="CUSTOMERID" />
+		</property>
+		<property name="contractType" type="java.lang.String">
+			<column name="CONTRACT_TYPE" />
+		</property>
+		<property name="contractStartDate" type="java.util.Date">
+			<column name="CONTRACT_START_DATE" />
+		</property>
+		<property name="contractEndDate" type="java.util.Date">
+			<column name="CONTRACT_END_DATE" />
+		</property>
+		<property name="contractAmount" type="java.lang.String">
+			<column name="CONTRACT_AMOUNT" />
+		</property>
+		<property name="contractPaymentTerm" type="java.lang.String">
+			<column name="CONTRACT_PAYMENT_TERM" />
+		</property>
+		<property name="productSerialNumber" type="java.lang.String">
+			<column name="PRODUCT_SERIAL_NUMBER" />
+		</property>
+		<property name="contractComments" type="java.lang.String">
+			<column name="CONTRACT_COMMENTS" />
+		</property>
+		<property name="serviceTaxRate" type="java.lang.String">
+			<column name="SERVICE_TAX_RATE" />
+		</property>
+		<property name="PaymentRemarks" type="java.lang.String">
+			<column name="PAYMENT_REMARKS" />
+		</property>
+		<property name="createDttm" type="java.util.Date">
+			<column name="CREATE_DTTM" />
+		</property>
+		<property name="createUserid" type="java.lang.String">
+			<column name="CREATE_USERID" />
+		</property>
+		<property name="updateDttm" type="java.util.Date">
+			<column name="UPDATE_DTTM" />
+		</property>
+		<property name="updateUserid" type="java.lang.String">
+			<column name="UPDATE_USERID" />
+		</property>
+	</class>
+</hibernate-mapping>

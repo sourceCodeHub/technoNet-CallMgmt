@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 9:29:49 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tns.cms.core.hibernate.models.ContractProduct" table="CONTRACT_PRODUCT">
+                
+        <composite-id mapped="false" unsaved-value="undefined">
+			<key-property column="CONTRACTID" name="contractid" />
+			<key-property column="PRODUCTID" name="productid" />
+		</composite-id>
+        
+        <!--<one-to-one cascade="save-update" class="com.tns.cms.core.hibernate.models.Product" foreign-key="PRODUCTID" name="product" />
+        
+         <property name="productid" type="java.lang.String">
+            <column name="PRODUCTID" />
+        </property> -->
+        <property name="contractProductDetails" type="java.lang.String">
+            <column name="CONTRACT_PRODUCT_DETAILS" />
+        </property>
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+        <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>
+    </class>
+</hibernate-mapping>

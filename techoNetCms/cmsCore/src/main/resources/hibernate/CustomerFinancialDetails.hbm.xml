@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 9:29:49 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.tns.cms.core.hibernate.models.CustomerFinancialDetails"
+		table="CUSTOMER_FINANCIAL_DETAILS">
+		<id name="customerid" type="java.lang.String">
+			<column name="CUSTOMERID" />
+			<generator class="foreign">
+				<param name="property">customer</param>
+			</generator>
+		</id>
+		
+		<one-to-one name="customer" cascade="save-update" class="com.tns.cms.core.hibernate.models.Customer" foreign-key="CUSTOMERID"  />
+		
+		<property generated="never" lazy="false" name="cin"
+			type="java.lang.String">
+			<column name="CIN" />
+		</property>
+		<property generated="never" lazy="false" name="pan"
+			type="java.lang.String">
+			<column name="PAN" />
+		</property>
+		<property generated="never" lazy="false" name="serviceTaxNumber"
+			type="java.lang.String">
+			<column name="SERVICE_TAX_NUMBER" />
+		</property>
+		<property generated="never" lazy="false" name="vatTin"
+			type="java.lang.String">
+			<column name="VAT_TIN" />
+		</property>
+		<property generated="never" lazy="false" name="vatTinWef"
+			type="java.util.Date">
+			<column name="VAT_TIN_WEF" />
+		</property>
+		<property generated="never" lazy="false" name="cstTin"
+			type="java.lang.String">
+			<column name="CST_TIN" />
+		</property>
+		<property generated="never" lazy="false" name="cstTinWef"
+			type="java.util.Date">
+			<column name="CST_TIN_WEF" />
+		</property>
+		<property generated="never" lazy="false" name="lbtNumber"
+			type="java.lang.String">
+			<column name="LBT_NUMBER" />
+		</property>
+		<property generated="never" lazy="false" name="bankAccountNumber"
+			type="java.lang.String">
+			<column name="BANK_ACCOUNT_NUMBER" />
+		</property>
+		<property generated="never" lazy="false" name="bankTptCode"
+			type="java.lang.String">
+			<column name="BANK_TPT_CODE" />
+		</property>
+		<property generated="never" lazy="false" name="createDttm"
+			type="java.util.Date">
+			<column name="CREATE_DTTM" />
+		</property>
+		<property generated="never" lazy="false" name="createUserid"
+			type="java.lang.String">
+			<column name="CREATE_USERID" />
+		</property>
+		<property generated="never" lazy="false" name="updateDttm"
+			type="java.util.Date">
+			<column name="UPDATE_DTTM" />
+		</property>
+		<property generated="never" lazy="false" name="updateUserid"
+			type="java.lang.String">
+			<column name="UPDATE_USERID" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 9:29:49 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tns.cms.core.hibernate.models.UserLogin" table="USER_LOGIN">
+        <id name="userid" type="java.lang.String">
+            <column name="USERID" />
+            <generator class="native" />
+        </id>
+        <property name="userFirstName" type="java.lang.String">
+            <column name="USER_FIRST_NAME" />
+        </property>
+        <property name="userLastName" type="java.lang.String">
+            <column name="USER_LAST_NAME" />
+        </property>
+        <property name="userType" type="java.lang.String">
+            <column name="USER_TYPE" />
+        </property>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="userEmail" type="java.lang.String">
+            <column name="USER_EMAIL" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="passwordResetString" type="java.lang.String">
+            <column name="PASSWORD_RESET_STRING" />
+        </property>
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+        <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>
+        <property name="updateDttm" type="java.util.Date">
+            <column name="UPDATE_DTTM" />
+        </property>
+        <property name="updateUserid" type="java.lang.String">
+            <column name="UPDATE_USERID" />
+        </property>
+    </class>
+</hibernate-mapping>

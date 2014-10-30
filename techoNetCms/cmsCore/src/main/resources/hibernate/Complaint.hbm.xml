@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2014 9:29:49 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tns.cms.core.hibernate.models.Complaint" table="COMPLAINT">
+        <id name="complaintid" type="java.lang.String">
+            <column name="COMPLAINTID" />
+            <generator class="native" />
+        </id>
+        
+        <set name="repairComplaints" table="REPAIR_COMPLAINT" inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="COMPLAINTID" not-null="true" />
+			</key>
+			<one-to-many class="com.tns.cms.core.hibernate.models.RepairComplaint" />
+		</set>
+        
+        <property name="contractid" type="java.lang.String">
+            <column name="CONTRACTID" />            
+        </property>
+        <property name="assignedUserid" type="java.lang.String">
+            <column name="ASSIGNED_USERID" />
+        </property>        
+        <property name="complaintSummary" type="java.lang.String">
+            <column name="COMPLAINT_SUMMARY" />
+        </property> 
+        <property name="complaintIsrepair" type="java.lang.String">
+            <column name="COMPLAINT_ISREPAIR" />
+        </property>
+        <property name="complaintType" type="java.lang.String">
+            <column name="COMPLAINT_TYPE" />
+        </property>
+        <property name="complaintAdditionalContact" type="java.lang.String">
+            <column name="COMPLAINT_ADDITIONAL_CONTACT" />
+        </property>
+        <property name="complaintComments" type="java.lang.String">
+            <column name="COMPLAINT_COMMENTS" />
+        </property>
+        <property name="complaintStatus" type="java.lang.String">
+            <column name="COMPLAINT_STATUS" />
+        </property>
+        <property name="complaintCreateDate" type="java.util.Date">
+            <column name="COMPLAINT_CREATE_DATE" />
+        </property>
+        <property name="complaintCloseDate" type="java.util.Date">
+            <column name="COMPLAINT_CLOSE_DATE" />
+        </property>
+        <property name="complaintClosureComments" type="java.lang.String">
+            <column name="COMPLAINT_CLOSURE_COMMENTS" />
+        </property>
+        <property name="createDttm" type="java.util.Date">
+            <column name="CREATE_DTTM" />
+        </property>
+        <property name="createUserid" type="java.lang.String">
+            <column name="CREATE_USERID" />
+        </property>
+        <property name="updateDttm" type="java.util.Date">
+            <column name="UPDATE_DTTM" />
+        </property>
+        <property name="updateUserid" type="java.lang.String">
+            <column name="UPDATE_USERID" />
+        </property>
+    </class>
+</hibernate-mapping>
