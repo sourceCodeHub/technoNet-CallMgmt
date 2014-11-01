@@ -96,7 +96,39 @@ public class CodeDecodeVO extends BaseVO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	
-	
+	/** 
+	  * @see java.lang.Object#equals(java.lang.Object) method is overridden
+	  */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof CodeDecodeVO)) {
+			return false;
+		}
+		CodeDecodeVO other = (CodeDecodeVO) obj;
+		if (primaryCode == null) {
+			if (other.primaryCode != null) {
+				return false;
+			}
+		} else if (!primaryCode.equals(other.primaryCode)) {
+			return false;
+		}
+		if (secondaryCode == null) {
+			if (other.secondaryCode != null) {
+				return false;
+			}
+		} else if (!secondaryCode.equals(other.secondaryCode)) {
+			return false;
+		}
+		return true;
+	}
+
 
 }

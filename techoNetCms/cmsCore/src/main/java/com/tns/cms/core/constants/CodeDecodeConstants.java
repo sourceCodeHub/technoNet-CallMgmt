@@ -17,7 +17,7 @@ public final class CodeDecodeConstants {
 
 	/**
 	 * Type of customer to be displayed in the drop down. example values :
-	 * Purchaser / Buyer / in Contact / Others
+	 * Purchaser / Buyer / in Contract / Others
 	 */
 	public static final String TYPE_OF_CUSTOMER = "TOC";
 
