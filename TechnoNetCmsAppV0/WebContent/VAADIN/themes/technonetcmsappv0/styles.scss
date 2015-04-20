@@ -1,0 +1,9 @@
+@import "addons.scss";
+@import "technonetcmsappv0.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in technonetcmsappv0.scss */
+.technonetcmsappv0 {
+  @include addons;
+  @include technonetcmsappv0;
+}
