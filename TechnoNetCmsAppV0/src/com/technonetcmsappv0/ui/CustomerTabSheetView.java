@@ -47,7 +47,7 @@ public class CustomerTabSheetView extends CustomComponent implements View {
 		// customerTabSheet.setCaption("CustomerInfo");
 		VerticalLayout vertlayout = new VerticalLayout();
 		Label headerLable = new Label("Customer Application");
-		headerLable.setStyleName(Reindeer.LABEL_H1);
+		headerLable.setStyleName(Reindeer.LABEL_H2);
 		vertlayout.addComponent(headerLable);
 
 		vertlayout.addComponent(customerTabSheet);

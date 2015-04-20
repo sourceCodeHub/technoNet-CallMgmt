@@ -71,8 +71,8 @@ public class SimpleLoginForm extends CustomComponent implements View {
 					getSession().setAttribute("user", username);
 
 					// Navigate to main view
-					getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
-
+//					getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+					getUI().getNavigator().navigateTo(CustomerMenuView.customerMenuView);
 				} else {
 
 					// Wrong password clear the password field and refocuses it

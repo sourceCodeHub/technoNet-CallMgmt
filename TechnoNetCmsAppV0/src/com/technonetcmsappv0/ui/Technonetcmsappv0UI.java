@@ -36,14 +36,15 @@ public class Technonetcmsappv0UI extends UI {
 		Label headerLable = new Label("Customer Application");
 		headerLable.setStyleName(Reindeer.LABEL_H1);
 		layout.addComponent(headerLable);
+		
 
-	
 		// Changes made for login page navigation
 
 		Navigator navigator = new Navigator(this, this);
 		navigator.addView(SimpleLoginForm.Name, SimpleLoginForm.class);
 		navigator.addView(SimpleLoginMainForm.NAME,	SimpleLoginMainForm.class);
 		navigator.addView("customer", new CustomerTabSheetView());
+		navigator.addView(CustomerMenuView.customerMenuView, new CustomerMenuView());
 
 		getNavigator().addViewChangeListener(new ViewChangeListener() {
 
