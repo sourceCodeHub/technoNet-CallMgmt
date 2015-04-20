@@ -1,4 +1,4 @@
-package com.example.technonetcmsappv0;
+package com.technonetcmsappv0.ui;
 
 import com.vaadin.data.validator.EmailValidator;
 import com.vaadin.navigator.View;

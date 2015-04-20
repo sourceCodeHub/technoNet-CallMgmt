@@ -1,4 +1,4 @@
-package com.example.technonetcmsappv0;
+package com.technonetcmsappv0.ui;
 
 import java.sql.SQLException;
 

@@ -1,4 +1,4 @@
-package com.example.technonetcmsappv0;
+package com.technonetcmsappv0.ui;
 
 import com.technonetcmsappv0.dao.UpdateCustomerDemographics;
 import com.vaadin.data.Item;

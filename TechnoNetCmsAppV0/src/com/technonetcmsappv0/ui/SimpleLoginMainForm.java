@@ -1,4 +1,4 @@
-package com.example.technonetcmsappv0;
+package com.technonetcmsappv0.ui;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;

@@ -2,7 +2,8 @@ package com.technonetcmsappv0.dao;
 
 import java.sql.SQLException;
 
-import com.example.technonetcmsappv0.MemberDAO;
+
+import com.technonetcmsappv0.ui.MemberDAO;
 import com.vaadin.data.Item;
 import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.fieldgroup.FieldGroup.CommitException;
