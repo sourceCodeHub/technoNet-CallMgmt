@@ -36,33 +36,108 @@ public class CustomerMenuView extends CustomComponent implements View {
 		MenuBar appMenu = new MenuBar();
 		// appMenu.setSizeFull();
 		appMenu.setAutoOpen(true);
-		
-		MenuItem serviceContract = appMenu.addItem("Service Contract", null, null);
-		MenuItem complaintMgmtMenu = appMenu.addItem("Complaint Management", null, null);
-		MenuItem masterMenu = appMenu.addItem("Master", null, null);
-		MenuItem orgMenu = appMenu.addItem("Organization", null, null);
-		MenuItem adminMenu = appMenu.addItem("Admin", null, null);
-		MenuItem helpMenu = appMenu.addItem("Help", null, null);
-		MenuItem exitMenu = appMenu.addItem("Exit", null, null);
 
-		complaintMgmtMenu.addItem("Complaint", null, null);
-		complaintMgmtMenu.addItem("Assign", null, null);
-		complaintMgmtMenu.addItem("Close", null, null);
-		complaintMgmtMenu.addItem("Re-Assign", null, null);
-
-		adminMenu.addItem("profile", null, null);
-		MenuItem settingMenu = adminMenu.addItem("setting", null, null);
-		MenuItem dataMenu = adminMenu.addItem("data", null, new Command() {
+		MenuItem serviceContract = appMenu.addItem("Service Contract", null, new Command() {
 
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
 				// TODO Auto-generated method stub
 				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
-
 			}
 		});
-//		dataMenu.addItem("backup", null, null);
-//		dataMenu.addItem("restore", null, null);
+		MenuItem complaintMgmtMenu = appMenu.addItem("Complaint Management", null, new Command() {
+
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		MenuItem masterMenu = appMenu.addItem("Master", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		MenuItem orgMenu = appMenu.addItem("Organization", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		MenuItem adminMenu = appMenu.addItem("Admin", null, null);
+		MenuItem helpMenu = appMenu.addItem("Help", null, null);
+		MenuItem exitMenu = appMenu.addItem("Exit", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+
+		complaintMgmtMenu.addItem("Complaint", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		complaintMgmtMenu.addItem("Assign", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		complaintMgmtMenu.addItem("Close", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		complaintMgmtMenu.addItem("Re-Assign", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+
+		adminMenu.addItem("profile", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		MenuItem settingMenu = adminMenu.addItem("setting", null, null);
+		MenuItem dataMenu = adminMenu.addItem("data", null, null);
+		dataMenu.addItem("backup", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
+		dataMenu.addItem("restore", null, new Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				// TODO Auto-generated method stub
+				getUI().getNavigator().navigateTo(CustomerTabSheetView.custTabSheetViewName);
+			}
+		});
 		adminMenu.addItem("Force Logout", null, null);
 
 		layout.addComponent(appMenu);
