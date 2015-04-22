@@ -22,7 +22,7 @@ public class Technonetcmsappv0UI extends UI {
 	CommonComponents commonComponents = new CommonComponents();
 
 	@WebServlet(value = "/*", asyncSupported = true)
-	@VaadinServletConfiguration(productionMode = false, ui = Technonetcmsappv0UI.class)
+//	@VaadinServletConfiguration(productionMode = false, ui = Technonetcmsappv0UI.class)
 	public static class Servlet extends VaadinServlet {
 	}
 
